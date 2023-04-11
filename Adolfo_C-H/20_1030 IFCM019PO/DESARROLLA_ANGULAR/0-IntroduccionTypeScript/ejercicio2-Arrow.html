@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolución de la función Arrow</title>
+</head>
+
+<body>
+    <!-- 
+
+    Su punto de partida, que muchos lenguajes han participado desde concepto de inicio.
+    foreach, será su base de desarrollo inicial
+    Su finalidad parte de ejecutar una función por cada elemento, parámetro asignado
+    inicialmente dicha iteracion partía de 3 elementos
+    1. valor
+    2. índica
+    3. Array
+        [inicio]
+        forEach(function(elemento,indice, array)) {
+            metodos declarados de ejecucion
+        }
+
+        [1 evolucion]
+        varArray.forEach(function(elemento)) {
+            metodos declarados de ejecucion
+        }
+
+        [2 evolucion]
+        array.forEach(element) => {
+            metodos declarados de ejecucion
+        });
+
+     -->
+    <script>
+       // var datos = [1,2,3,4,5,6,7,8]
+        /* 
+        Recordando:
+        la sentencia return en la finalizacion de la funcion donde especifica un
+        valor para ser devuelto.
+        Finalidad propia de dicha sentencia, forzar la salida de manera inmediata
+        de la funcion en que se encuentra
+        */
+       /* --------------------CONJUNTO DE SINTAXIS--------------- */
+       //Recorridos ortodoxos
+       var otraFuncion = function (numero) {
+        return numero +2
+       }
+       console.log(otraFuncion(6));
+
+       //Omitiendo la funcion
+       var otraFuncion = (numero)=>numero+2
+       console.log(otraFuncion(2));
+
+       //Funcionalidad y reutilización
+       var a = otraFuncion(5)
+       console.log(a);
+
+       var b = otraFuncion(8)
+       console.log(b); 
+       console.log(otraFuncion(8))// :D
+        
+       //Solo hay un parámetro
+       var hola = nombre => console.log(`Hola, me llamo: ${nombre}`);
+       hola('Pepe');
+
+       var hola = nombre => (`Hola, me llamo: ${nombre}`);
+       console.log(hola('Juan'));
+
+       //Sin parámetros
+
+       var mostrarFecha = ()=> new Date().toLocaleDateString()
+       console.log(mostrarFecha());
+       console.log(new Date().toLocaleDateString());
+       //Devolviendo objeto literal
+       var usuario = (correo, clave, zapellido)=>({email:correo,clave:clave,apellido:zapellido});
+       console.log(usuario('andragogo1012@gmail.com','1012','Cuadrado'))
+    </script>
+</body>
+
+</html>
