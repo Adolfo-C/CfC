@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APLICACION IMC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <script>
+        function calcular() {var peso = calculoPeso.value;var altura = calculoAltura.value;var imc = 0;
+            var respuesta = document.getElementById('resultado');
+            imc= (peso / (Math.pow(altura, 2))).toFixed(2);
+            console.log(imc);
+            if((peso!=null)&&(altura!=null)){
+            if(imc <= 18.5) {respuesta.innerHTML = 'Índice de masa corporal: '+imc+'\nPeso por debajo de lo normal'}
+            else if(imc <= 24.9){respuesta.innerHTML = 'Índice de masa corporal: '+imc+'\nPeso standar o saludable'}
+            else if(imc <= 29.9){respuesta.innerHTML = 'Índice de masa corporal: '+imc+'\n<h4>Sobre peso indice poco saludable'}
+            else if(imc >= 29.9){respuesta.innerHTML='Índice de masa corporal: '+imc+'\n<h3>Por favor consulte su médico'}}
+        }
+        function limpiar() {
+            document.getElementById('limpiar').reset();
+            document.getElementById('resultado').innerHTML = '';
+            xResultado.innerHTML='La calculadora de índice de masa corporal (BMI) calcula la cantidad de masa corporal que tiene una persona en relación con la edad, la altura y el peso.';
+        }
+    </script>
+    <style>
+        .container{margin: 0 auto; text-align: center; margin-top: 200px;}
+        #xResultado, #resultado{text-align: center;color: blue;}
+        #resultado{text-align: center;color: blue;}
+    </style>
+    <div class="container"">
+        <button type="button" class="btn btn-lg btn-success" data-bs-toggle="modal" data-bs-target="#xModal"data-bs-whatever="@what">Calculadora de IMC</button>
+        <div class="modal fade" id="xModal" tabindex="-1" aria-labelledby="xModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="xModalLabel">Introduce datos:</h1>
+                        <button onclick="limpiar()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="limpiar">
+                            <div class="mb-3">
+                                <label for="kg_input">Peso *</label>
+                                <input type="text" id="kg_input" aria-label="Peso kg" name="Peso" maxlength="5" style="width:170px" class="ctxt" data-gt="">
+                                <label for="recipient-name" class="col-form-label">Peso *</label><span aria-describedby="kg" class="placeholdertext" id="kg_ph">kg</span>
+                                <input type="number" class="form-control" id="calculoPeso">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label">Altura *</label>
+                                <input type="number" class="form-control" id="calculoAltura">
+                            </div>
+                            <!-- <textarea class="form-control" id="otra">Otras condiciones</textarea> -->
+                        <button onclick="limpiar()" type="button" class="btn btn-secondary">Limpiar datos</button>
+                            <button onclick="calcular()" type="button" class="btn btn-primary">Pulsa para continuar</button>
+                            <div id="" class="mb-3">
+                                <p class="form-control" id="resultado"></p>
+                                <div id="xResultado"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="limpiar()" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                    <a href="https://www.bing.com/search?q=indice+de+masa+corporal&cvid=2c30b2e4b3234e07b147b4e8fecac80c&aqs=edge.0.0j69i57j0l7.5352j0j1&pglt=2081&FORM=ANNTA1&PC=U531"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

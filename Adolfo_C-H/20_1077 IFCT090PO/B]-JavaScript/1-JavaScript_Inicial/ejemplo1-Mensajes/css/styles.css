@@ -1,0 +1,12 @@
+.swal-overlay {
+    background-color: rgba(10, 10, 10, 0.45);
+  }
+.swal-modal {
+    border: 2px solid black;
+  }
+  .swal-footer {
+    background-color: brown;
+    margin-top: 32px;
+    border-top: 2px solid #E9EEF1;
+    opacity: 0.4;
+  }

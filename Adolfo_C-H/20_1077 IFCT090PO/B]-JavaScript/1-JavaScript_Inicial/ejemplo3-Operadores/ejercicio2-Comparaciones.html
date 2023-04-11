@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores lógicos, relacionales, aritméticos</title>
+    <link rel="icon" type="image/x-icon" href="../../../assets/images/javascript-736401_1280.png">
+</head>
+
+<body>
+    <script>
+        /* num=parseFloat(prompt('Introduce número')); */
+        var num=7
+        console.log('<h4>Número: '+ num)
+        console.log('<h4>Igual a 7: '+ (num==7))
+        console.log('<h4>Desigualdad: '+ (num!=7))
+        console.log('<h4>Mayor que 6: '+ (num>6))
+        console.log('<h4>Mayor o igual que 10: '+ (num>=10))
+        
+        console.log('<h4>Igualdad: '+ (num=='7'))
+        console.log('<h4>Igualdad estricta: '+ (num==='7'))
+        console.log('<h4>Desigual: '+ (num!='7'))
+        console.log('<h4>Desigual estricta: '+ !(num===7))
+
+        var nombre1='Juan';var nombre2='Pepi'
+        console.log('<h3>condición Y: '+((nombre1=='Juan')&&(nombre2=='Pepi')))
+        console.log('<h3>condición O: '+((nombre1=='Juan')||(nombre2=='Peppa')))
+        console.log('<h3>condición O: '+((nombre1=='Juan')||(nombre2=='Peppa')))
+        console.log('<h3>Negación: '+(nombre1!='Pepe'))
+        console.log('<h3>Negación: '+(nombre1!='Juan'))
+        console.log('<h3>Negación: '+!(nombre1=='Pepe'))
+        console.log('<h3>Negación: '+!(nombre1=='Juan'))
+        console.log('<h3>Negación: '+(!nombre1||!nombre2))
+        console.log('<h3>Negación6: '+((!nombre1)||(nombre2=='Pepi')))
+        console.log('<h3>Negación: '+((!nombre1)&&(!nombre2)))
+    </script>
+</body>
+
+</html>

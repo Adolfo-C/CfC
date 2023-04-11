@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booleanos if else</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</head>
+
+<body> 
+    <script>
+        var xBorde = false;
+        var xColor = false;
+        var xSombra = false;
+        var vcSbody = false;
+        function borde() {
+            if (xBorde == false) {
+                cuadrado.style.border = '3px solid #88939c';
+                xBorde = true;
+            } else {
+                cuadrado.style.border = 'none';
+                xBorde = false;
+            }
+        }
+        function color() {
+            if (!xColor) {
+                cuadrado.style.backgroundColor = 'pink';
+            } else {
+                cuadrado.style.backgroundColor = '#2196f3';
+            }xColor = !xColor;
+        }
+        function sombra() {
+            if (!xSombra) {
+                cuadrado.className = "sombra"
+            } else {
+                cuadrado.className = null
+            }xSombra = !xSombra;
+        }
+        function csombra() {
+            
+        }
+    function resul() {
+        resultado.className=cuadrado.className;
+        resultado.style.backgroundColor=cuadrado.style.backgroundColor;
+        resultado.style.border=cuadrado.style.border;
+    }
+    function cSbody(){
+        if (!vcSbody) {
+            document.body.style.backgroundColor= "rgb(" + Math.floor(Math.random() * 255)+ "," + Math.floor(Math.random() * 255) + ","+ Math.floor(Math.random() * 255) + ")";
+            } else {document.body.style.backgroundColor='white';
+            }vcSbody = !vcSbody;
+    }
+    </script>
+    <style>
+        #cuadrado{
+            width: 30%;
+            height: 160px;
+            margin: 0 auto;
+            margin-top: 32px;
+            margin-bottom: 20px;
+            border-radius: 38px;
+            background-color: #2196f3;
+        }
+         #resultado{
+            width: 30%;
+            height: 150px;
+            margin: 0 auto;
+            margin-top: 32px;
+            margin-bottom: 20px;
+            border-radius: 38px;
+            background-color: black;
+        }
+        .sombra {
+            box-shadow:
+                -1px -1px 10px #daeaf8,
+                3px 3px 10px #88939c,
+                6px 6px 10px #35393f;
+        }
+        .container{text-align: center; margin: 0 auto;}
+    </style>
+    <div class="container">
+        <h3 class="display-3">Estilos con <code> JavaScript</code></h3>
+        <hr>
+        <button onclick="borde()" class="btn btn-outline-danger ">Cambio borde</button>
+        <button onclick="color()" class="btn btn-outline-warning ">Cambio Color</button>
+        <button onclick="sombra()" class="btn btn-outline-dark">Cambio de Sombra</button>
+        <button onclick="cSbody()" class="btn btn-outline-dark">Cambia el fondo</button>
+        <hr>
+        <div id="cuadrado"></div>
+        <button onclick="resul()" class="btn btn-outline-danger ">Copiar</button>
+        <div id="resultado"></div>
+    </div>
+
+</body>
+
+</html>

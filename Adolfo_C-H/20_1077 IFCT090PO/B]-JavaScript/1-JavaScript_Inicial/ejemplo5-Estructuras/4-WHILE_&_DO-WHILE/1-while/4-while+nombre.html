@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While + atributo name</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="../../../../../assets/images/dsBuffer.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container"style="text-align: center; margin: 0 auto;">
+        <h2>Comunicación disruptiva + Incremento de valor</h2>
+        <div class="card" style="width: 32rem; margin: 0 auto;">
+            <h4 class="card-title">Frigorífico artesano</h4><!-- Conceptos antagónicos -->
+            <img src="../../../../../assets/images/botijo.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title"><strong>10,95€</strong></h4>
+              <p class="card-text">
+                El trabajo científico de Pinto y Zubizarreta, en desarrollo 2 ecuaciones diferenciales definen la potencialidad y la capacidad de enfriamiento de un cuerpo.
+              </p><span><img width="85%" src="../../../../../assets/images/formulabotijo.jpg" alt=""></span>
+              <form name="repetir" action="" class="form-control">
+                <!-- Cantidad -->
+                <input id="cantidad" style="width: 48px;" type="number" size="4">&nbsp; Cantidad<br>
+                <label class="form-text text-muted" for="">Cantidad máxima 5uds</label><br>
+              <!-- Importe -->
+                <div style="text-align: center; margin: 0 auto; width: 200px;">
+                <button onclick="ventaIncremento()" type="button" class="btn btn-outline-primary" value="Añadir al carrito" >
+                    <img width="15%" src="../../../../../assets/images/carrito-de-compras-png-2.png" alt="">
+                    Añadir a carrito</button>
+                </div>
+                <label class="form-text" for=""></label>
+              </form>
+              <div id="resultado"></div>
+              <a href="#" class="btn btn-outline-primary">Comprar</a>
+            </div>
+        </div>
+    </div>
+    <script src="script4.js"></script>
+</body>
+</html>
