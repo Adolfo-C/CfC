@@ -1,0 +1,171 @@
+body {
+    background-color: white;
+}
+
+/* 
+.col-form-label {
+    background-color: #dbdbe4;
+    font-size: 16px;
+    color: #465c25;
+    font-family: arial;
+    text-transform: uppercase;
+    border: 5px #9191a1e1;
+    border-style: groove;
+    border-radius: 2px solid #9191a1e1;
+    box-shadow: 4px 2 px 2px #b10101;
+    margin: 0 auto;
+}
+ */
+.mb-3 {
+    background-color: #e9e9f0e3;
+    /* border: 3px solid #9191a1; */
+    margin: 0 auto;
+}
+
+.modal-footer {
+    background-color: #eeee08ef;
+    margin: 0 auto;
+}
+
+.modal-dialog {
+    background-color: #ece8e365;
+    margin: 0 auto;
+}
+
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.664);
+    color: black;
+    margin: 0 auto;
+}
+
+.container-sm {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.xp1 {
+    border: solid;
+    border-radius: 5px;
+    border-color: tomato;
+    padding: 5px;
+}
+
+.xhL {
+    text-align: end;
+    border-bottom: solid;
+    border-radius: 5px;
+    border-color: blue;
+    margin-top: 3rem;
+}
+
+/* .form-control {
+    background-color: #fbfdfd;
+    border-top: 3px thin #d4d6e7c5;
+    border-bottom: 5px double #b10101;
+    border-left: 5px double#b10101;
+    border-right: 5px double#b10101;
+    font: normal bold 18px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    box-sizing: border-box;
+    box-shadow: 4px 0 px 2px #f30101;
+    margin: 0 auto;
+} */
+.glow {
+    font-size: 1em;
+    color: black;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 2 10px #fff, 0 0 20px #fff, 0 0 30px #2643e7, 0 0 40px #0d0b18, 0 0 50px #130361, 0 0 60px #1b09bd, 0 0 70px #1809eb;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #0b0ff8, 0 0 40px #3416bb, 0 0 50px #594dff, 0 0 60px #4dcdff, 0 0 70px #2797f3, 0 0 80px #0c09c4;
+    }
+}
+
+.pie {
+    text-align: center;
+    padding: 1px;
+    margin-top: 100px;
+    background-color: rgb(240, 253, 239);
+    color: black;
+  }
+
+#grid {
+    height: 1pw;
+    display: grid;
+    grid-template-areas: "a a";
+    grid-gap: 10px;
+    grid-auto-columns: auto;
+}
+
+#grid>div {
+    background-color: lime;
+}
+/* Class */
+.visible {
+  visibility: visible !important;
+}
+.invisible {
+  visibility: hidden !important;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .collapsible:hover {
+    background-color: #ccc;
+  }
+  
+  /* Style the collapsible content. Note: hidden by default */
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
+
+  body{
+    display: flex;
+    /* -ms-flex-align: center;*/
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 36px;
+    background-color: #f5f5f5;/*#CCCCC*/
+}
+
+.formulario-login{
+    width: 100%;
+    max-width: 420px;
+    padding: 15px;
+    margin: auto;
+}
+
+.warning{
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid red;
+}
+
+#resultado{
+    text-align: center;
+    background-color: white;
+    border-color: crimson;
+}
