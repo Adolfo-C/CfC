@@ -1,0 +1,31 @@
+.container {
+    text-align: center;
+    margin: 0 auto;
+}
+a {
+    margin: 0px;
+}
+button{
+    margin: 0;
+}
+.navbar-toggler {
+    color: greenyellow;
+    border-color: greenyellow;
+  }
+
+/* Api toolbar Angular Material */
+.example-spacer {
+    flex: 1 1 auto;
+}
+pre{
+    text-align: justify;
+}
+
+
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+    background-color: #49c5b6;
+}
+
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+    background-color: #49c5b6;
+}
