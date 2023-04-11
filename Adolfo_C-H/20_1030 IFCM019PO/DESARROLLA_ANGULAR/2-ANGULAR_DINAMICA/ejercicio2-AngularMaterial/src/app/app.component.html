@@ -1,0 +1,157 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg shadow-lg rounded" style="background-color: #6610f2;">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#"> <img style="width: 10%;" src="../assets/images/angularMaterial.png"
+          alt=""> ANGULAR
+        MATERIAL</a>
+    </div>
+  </nav>
+  <hr class="shadow-lg">
+  <pre>
+    Por defecto Angular no absorve ningún tipo de estilo, no obstante si posee una libreria
+    propia Angular Material. Dará todas las ventajas a su favor posibles.
+    No se puede renunciar a los estilos, ya que no sólo generan una marca diferenciadora
+    sino que además es vital para la muestra e impacto de visualización al usuario.
+  </pre>
+  <label for="">Instalación</label>
+  <ul>
+    <li>Directiva: ng add @angular material
+      <ul>
+        <li>Ajusta la configuracín del angular a la librería</li>
+      </ul>
+    </li>
+  </ul>
+  <mat-tab-group animationDuration="2000ms" style="text-align:center; margin: 0,auto;">
+    <mat-tab class="mat-display3" label="Tipografía de Angular">
+      <p>Párrafo de visual predeterminada</p>
+      <p class="mat-caption">Párrafo de visual caption</p>
+      <p class="mat-h2">Párrafo</p>
+      <p class="mat-body-string">Párrafo de estructura</p>
+      <p class="mat-display-3">Párrafoasociado a display-3</p>
+    </mat-tab>
+    <mat-tab class="mat-display-3" label="BOTONES">
+      <div style="margin: 16px;">
+        <button mat-button color="primary">Principal</button>
+        <button mat-button color="accent">Secundario</button>
+        <button mat-button color="warn">Terciario</button>
+      </div>
+      <div style="margin: 16px;">
+        <button mat-raised-button color="primary">Principal</button>
+        <button mat-raised-button color="accent">Secundario</button>
+        <button mat-raised-button color="warn">Terciario</button>
+      </div>
+      <div>
+        <button mat-stroked-button color="primary">Principal</button>
+        <button mat-stroked-button color="accent">Secundario</button>
+        <button mat-stroked-button color="warn">Terciario</button>
+      </div>
+      <div>
+        <button mat-fab color="primary">Principal</button>
+        <button mat-fab color="accent">Secundario</button>
+        <button mat-fab color="warn">Terciario</button>
+      </div>
+      <div>
+        <button mat-mini-fab color="primary">Principal</button>
+        <button mat-mini-fab color="accent">Secundario</button>
+        <button mat-mini-fab color="warn">Terciario</button>
+      </div>
+      <div>
+        <button mat-icon-button color="primary">
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button color="accent">
+          <mat-icon>home</mat-icon>
+        </button>
+        <button mat-icon-button color="warn">
+          <mat-icon>build</mat-icon>
+        </button>
+        <button mat-icon-button color="warn">
+          <mat-icon>account_circle</mat-icon>
+        </button>
+        <button mat-icon-button>
+          <mat-icon>search</mat-icon>
+        </button>
+        <button mat-icon-button color="accent">🔑</button>
+      </div>
+    </mat-tab>
+    <mat-tab label="Menú">
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <!--Entenderemos este atributo de estructura asociado al recorrido de estructura cuyo nombre sea menú
+        entendido cómo un id="menu"-->
+        <mat-icon>morevert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button [matMenuTriggerFor]="menu2" mat-menu-item>Configuración</button>
+        <button mat-menu-item>Ayuda</button>
+      </mat-menu>
+    </mat-tab>
+    <mat-menu #menu2>
+      <button mat-menu-item [matMenuTriggerFor]="otroMenu">item1</button>
+      <button mat-menu-item>item2</button>
+    </mat-menu>
+    <mat-menu #otroMenu="matMenu">
+      <button mat-fab color="primary">Opción 1</button>
+      <button mat-fab color="accent">Opción 2</button>
+      <a href="" mat-fab color="warn">Opción 3</a>
+    </mat-menu>
+    <mat-tab label="Grids">
+      <mat-grid-list cols="4">
+        <mat-grid-tile *ngFor="let item of nombres" [style.backgroundColor]="item.color">
+          {{item.nombre}}
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-tab>
+    <mat-tab label="Link">
+      <a mat-button color="primary" href="">Opción a</a>
+      <a mat-button color="warn" href="">Link 1</a>
+      <a mat-button color="accent" href="">Link 2</a>
+      <a mat-button color="warn" disabled href="">Link 3</a>
+    </mat-tab>
+    <mat-tab label="Tarjetas">
+      <mat-card class="tarjeta">
+        <mat-card-header>
+          <div mat-card-avatar class="avatar"></div>
+          <mat-card-title>Reflexionando</mat-card-title>
+          <mat-card-subtitle>Cautivado por el entorno</mat-card-subtitle>
+        </mat-card-header>
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        <img mat-card-image src="https://picsum.photos/id/103/367/267" alt="Foto campo">
+        <mat-card-content>
+          <p>
+            Todo bien, disfrutando de días de reflexión y libertad.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>SHARE</button>
+          <button mat-button>
+            <mat-icon>share</mat-icon>
+          </button>
+          <button mat-button color="primary">
+            <mat-icon>thumb_up</mat-icon>
+          </button>
+          <button mat-button color="accent">
+            <mat-icon matBadge="4" matBadgeColor="primary" matBadgeSize="small">favorite</mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-tab>
+    <mat-tab label="Sidenav">
+      <mat-drawer-container class="example-container" autosize>
+        <mat-drawer #drawer class="example-sidenav" mode="side">
+        <p>Total Carrito</p>
+        <p *ngIf="showFiller">1º,2º,3º.</p>
+        <button (click)="showFiller = !showFiller" mat-raised-button>
+        Mostrar...
+        </button>
+        </mat-drawer>
+        
+        <div class="example-sidenav-content">
+        <button type="button" mat-button (click)="drawer.toggle()">
+        Comprar
+        </button>
+        </div>
+        
+        </mat-drawer-container>
+    </mat-tab>
+  </mat-tab-group>
+</div>

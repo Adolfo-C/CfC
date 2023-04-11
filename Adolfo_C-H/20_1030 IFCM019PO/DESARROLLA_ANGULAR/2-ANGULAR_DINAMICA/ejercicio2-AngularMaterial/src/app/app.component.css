@@ -1,0 +1,41 @@
+/* img{
+    width: 10%;
+} */
+/* button{
+    margin: 8px;
+} */
+/* Configuración de estilo Angular Material Card
+.example-card {
+    max-width: 400px;
+  } 
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+*/
+.tarjeta {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+.avatar {
+    background-image: url('https://picsum.photos/id/103/2592/1936');
+    background-size: cover;
+  }
+/* Estilo preter. por Angular Material Sidenav */
+  .example-container {
+    width: 500px;
+    height: 300px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .example-sidenav {
+    padding: 20px;
+  }
