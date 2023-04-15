@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retícula estática</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</head>
+<body>
+    <pre>
+        1º Rango común múltiplo y divisor de 12
+        2º Definiciones de pantalla
+            xs ->extrapequeñas (móviles) < 575px
+            sm ->pequeñas (tablet, horizontalidad) >= 576px
+            md ->medianas (tablet) >= 760px
+            lg ->grandes (escritorio, portátil) >=990px
+            xl ->extragrandes (smartTV, escritorios grandes) >=1200px
+        3º Visualizaciòn de dispositivo asociada a Bootstrap
+            .row (12 casillas/columnas por fila)
+            .col
+    </pre> 
+    <div class="container" style="text-align: center;">
+        <div class="row">
+            <div class="col-md-12" style="background-color: slategray; height: 80px;">HEADER</div>
+        </div>
+        <div class="row" style="height: 130px; background-color: black;">
+            <div class="col-md-3"">1</div>
+            <div class="col-md-3 border" style="background-color: skyblue; padding-top: 42px;">1</div>
+            <div class="col-md-3 border" style="background-color: skyblue; padding-top: 42px;">2</div>
+            <div class="col-md-3"">4</div>
+        </div>
+        <div class="row" style="height: 130px; background-color: black;">
+            <div class="col-md-2 border" style="background-color: skyblue;">publicidad</div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2 border" style="background-color: seagreen; padding-top: 42px;">texto</div>
+            <div class="col-md-2 border" style="background-color: seagreen; padding-top: 42px;">imagen</div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2 border" style="background-color: skyblue;">publicidad</div>
+        </div>
+        <div class="row" style="height: 130px; background-color: black;">
+            <div class="col-md-3" style="background-color: coral;">contenido1</div>
+            <div class="col-md-3 border" style="background-color: seagreen; padding-top: 42px;">contenido2</div>
+            <div class="col-md-3 border" style="background-color: seagreen; padding-top: 42px;">contenido3</div>
+            <div class="col-md-3" style="background-color: coral;" >contenido4</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border" style="background-color: brown; height: 80px; padding-top: 42px;">Concepto A</div>
+            <div class="col-md-6 border" style="background-color: brown; height: 80px; padding-top: 42px;">Concepto B</div>
+        </div>
+        <div class="row" style="height: 130px;">
+            <div class="col-md-3 col-sm-12"></div>
+            <div class="col-md-3 col-sm-12 border" style="background-color: orange; padding-top: 42px;">5</div>
+            <div class="col-md-3 col-sm-12 border" style="background-color: orange; padding-top: 42px;">6</div>
+            <div class="col-md-3 col-sm-12"></div>
+        </div>
+        <div class="row" style="height: 130px; background-color: black;">
+            <div class="col-md-1" style="background-color: chartreuse; padding-top: 42px;">footer1</div>
+            <div class="col-md-1 border" style="background-color: seagreen; padding-top: 42px;">contenido 1</div>
+            <div class="col-md-1 border" style="background-color: seagreen; padding-top: 42px;">contenido 1</div>
+            <div class="col-md-1" style="background-color: chartreuse; padding-top: 42px;">contenido 1</div>
+            <div class="col-md-1" style="background-color: chartreuse; padding-top: 42px;">contenido 1</div>
+            <div class="col-md-1" style="background-color: chartreuse; padding-top: 42px;">contenido 1</div>
+            <div class="col-md-1" style="background-color: chartreuse; padding-top: 42px;">contenido 1</div>
+            <div class="col-md-1" style="background-color: chartreuse; padding-top: 42px;">contenido 1</div>
+            <div class="col-md-1" style="background-color: chartreuse; padding-top: 42px;">contenido 1</div>
+            <div class="col-md-1 border" style="background-color: seagreen; padding-top: 42px;">contenido 1</div>
+            <div class="col-md-1 border" style="background-color: seagreen; padding-top: 42px;">contenido 1</div>
+            <div class="col-md-1" style="background-color: chartreuse; padding-top: 42px;">footer12</div>
+        </div>
+    </div>
+</body>
+</html>

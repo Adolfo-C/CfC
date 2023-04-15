@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos y funciones</title>
+    <link rel="icon" type="image/x-icon" href="../../images/javascript-736401_1280.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/script3.js"></script>
+</head>
+
+<body>
+    <style>
+        .estetic {
+            color: gray;
+            font-weight: bold;
+            border: 1px solid brown;
+            border-radius: 3px;
+            text-align: left;
+        }
+    </style>
+    <div class="container" align="middle">
+        <div class="card border-dark mb-3" style="max-width: 32rem;">
+            <div class="card-header">FUNCIONES</div>
+            <div class="card-body">
+                <h5 class="card-title">Métodos asociados</h5>
+                <p class="card-text">Matemáticas (Math)<br>Cadena de texto (String)<br>Fecha y hora (Date)<br></p>
+                <button onclick="funcionesMath()" type="button" class="btn btn-outline-primary">∱Math</button>
+                <button onclick="funcionesString()" type="button" class="btn btn-outline-primary">∱String</button>
+                <button onclick="funcionesDate()" type="button" class="btn btn-outline-primary">∱Date</button>
+                <div id="resultado" class="estetic"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        /* document.getElementById('') */
+        function funcionesMath() {
+            var numero = 8;
+            document.getElementById('resultado').innerHTML =
+                'Logaritmo: ' + Math.log(1000) + '<br>' +
+                'Exponencial: ' + Math.exp(numero) + '<br>' +
+                'Raiz cuadrada: ' + Math.sqrt(9) + '<br>' +
+                'Potencia 2^(elevado)8: ' + Math.pow(2, numero) + '<br>' +
+                'Valor absoluto: ' + Math.abs(-66845) + '<br>' +
+                'Redondeo a baja: ' + Math.floor(6.3458) + '<br>' +
+                'Redondeo al alza: ' + Math.ceil(6.3458) + '<br>' +
+                'Redondeo medio: ' + Math.round(6.3458) + '<br>' +
+                'Random o semilla: ' + Math.random() + '<br>' +
+                'Random o semilla(0-10): ' + Math.random() * 10 + '<br>' +
+                'Valor máximo: ' + Math.max(1, 4, 9, 6) + '<br>' +
+                'Valor mínimo: ' + Math.min(3, 4, 2, 6) + '<br>' +
+                'Coseno Pi: ' + Math.cos(Math.PI) + '<br>' +
+                'Cambio de nº a String: ' + numero.toString();
+        }
+        function funcionesString() {
+            var texto = 'JAVASCRIPT Estructura de Cadena de Texto(6)'
+            document.getElementById('resultado').innerHTML =
+                'Minusculas: ' + texto.toLocaleLowerCase() + '<br>' +
+                'Mayusculas: ' + texto.toLocaleUpperCase() + '<br>' +
+                'Localización de caracter @: ' + texto.indexOf('@') + '<br>' +
+                'Longitud de la cadena de texto: ' + texto.length + '<br>' +
+                'Valor UNICODE: ' + texto.charCodeAt(texto.indexOf('J')) + '<br>' +
+                'Unicode : ' + String.fromCharCode(960);
+        }
+        function funcionesDate() {
+            var fecha = new Date();
+            document.getElementById('resultado').innerHTML =
+                'Fecha: ' + fecha.toLocaleDateString() + '<br>' +
+                'Hora: ' + fecha.toLocaleTimeString() + '<br>' +
+                'Minutos: ' + fecha.getMinutes() + '<br>' +
+                'Segundos: ' + fecha.getSeconds() + '<br>' +
+                'Milisegundos: ' + fecha.getMilliseconds() + '<br>' +
+                'Mes: ' + (1 + fecha.getMonth()) + '<br>' +
+                'Día de la semana: ' + fecha.getDay() + '<br>' +
+                'Día del mes: ' + fecha.getDate() + '<br>';
+        }
+    </script>
+</body>
+
+</html>

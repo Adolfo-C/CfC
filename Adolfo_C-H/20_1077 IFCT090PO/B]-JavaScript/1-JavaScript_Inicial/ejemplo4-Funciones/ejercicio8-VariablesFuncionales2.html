@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos y funciones anidadas</title>
+    <link rel="icon" type="image/x-icon" href="../../images/javascript-736401_1280.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script>
+        var contador=0
+        function ClickA() {
+            nºClick.innerHTML=++contador;
+            venta()
+        }
+        function borrar() {
+            contador=0;
+            nºClick.innerHTML='';
+            resultado.innerHTML='';
+        }
+        function venta() {
+            resultado.innerHTML=(319.99*contador).toFixed(2)+'€';
+        }
+        function comprar() {
+            comprar.href='https://www.'
+        }
+    </script>
+</head>
+<body>
+    <style>
+        #resultado{
+            width: 200px;
+            height: 38px;
+            text-align: center;
+            margin: 0 auto;
+            color:green;
+            font-weight: bold;
+            text-shadow: 0px 4px 4px rgb(2, 63, 2);
+        }
+        .container{
+            text-align: center; margin: 0 auto; width: 32rem;
+        }
+        img{
+            padding: 0;
+        }
+    </style>
+    <div class="container">  <!-- align="middle" -->
+        <div class="card" style="width: 18rem;">
+            <img src="https://cdn.watersportsoutlet.com/images/1x1/thumbs/2019%20ONeill%20Mens%20HyperFreak%2043%2Bmm%20Chest%20Zip%20Hooded%20Wetsuit%20Black%205346.700x700.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><span class="badge bg-success">NOVEDAD</span></h5>
+                <h4><del>399,95</del> <span style="color: red;">319,99 € <br>(ahorra 79,96 €)</span></h4>
+                <p class="card-text">O'NEILL
+                    Hombres Hyperfreak+ 5/4mm Con Capucha Chest Zip Traje - Negro <br><a class="form-control" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">Características</a>
+                    <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                    Sistema FUZE Enty: el exclusivo sistema FUZE (entrada de cremallera superior delantera) de O'Neill ofrece una nueva alternativa. Usando la misma tecnología de cremallera flotante libre que nuestro cierre ZEN ZIP patentado. El cierre FUZE te mantiene seco y permite una flexibilidad sin restricciones.
+                    Neopreno Technobutter 3 y TB3X: el nuevo y exclusivo neopreno hidrofóbico elástico mejorado de O'Neill con núcleo de goma de espuma ENVY ligera como una pluma . Lo último, flexibilidad, calidez y confort. Combinado con Technobutter 3X, el material más ligero, flexible y suave jamás creado.
+                    Costuras pegadas, con los ojos vendados y con cinta adhesiva: cinta de costura de neopreno suave y duradera. Neopreno dividido de 0.5 mm aplicado a costuras con triple pegado para sellar el agua y mantenerlo seco y suelto.
+                    Cuello doble superseal: un diseño tostado y cálido de dos capas con un forro interior de piel lisa de 360,, amplia capacidad de ajuste y un bloqueo seguro. Totalmente ajustable y hermético.
+                    Zonas estratégicas de paleta sin costuras: un panel ergonómico sin costuras debajo de la manga que permite un movimiento sin restricciones y elimina las erupciones. Diseño flexible y único que utiliza una colocación mínima de la costura para mayor comodidad.
+                    Krypto knee padz: panel de neopreno de alta elasticidad resistente a la abrasión con forma ergonómica para una durabilidad cómoda. El diseño flexible y único utiliza una rodillera extendida para mayor durabilidad.
+                    Bolsillo externo para llaves con bucle: panel de neopreno de alta elasticidad resistente a la abrasión con forma ergonómica para una durabilidad cómoda. Ubicado a lo largo de la entrepierna inferior de la pierna. Construido con soldadura de costura fluida y neopreno UltraFlex DS, este bolsillo para llaves ha agregado resistencia, fácil acceso y completamente seguro.
+                </p></div>
+               <button onclick="ClickA()" class="btn btn-primary position-relative">Agregar
+                <svg  width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16"xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                    </svg><span id="nºClick" class="translate-middle badge rounded-pill bg-danger border-border-dark"></span></button>
+                <button onclick=borrar() href="#" class="btn btn-primary">Borrar
+                    <svg  width="16" height="16" fill="currentColor" class="bi bi-cart-dash" viewBox="0 0 16 16"xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5 7a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4z"/>
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg>
+                </button>
+                <div><marquee id="resultado" behavior="" direction=""></marquee></div>
+                <a onclick="" type="button" class="btn btn-outline-success">Comprar
+                    <svg  width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16"xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recorridos y métodos test</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container" style="text-align: center; margin: 0 auto; width: 380px">
+        <h2>Estructuras for [for of], con métodos: <code>testeo</code></h2>
+        <table  id="resultado" class="table table-success table-stripped">
+            <tr>
+                <th>Teléfono</th>
+                <th>testeo</th>
+            </tr>
+        </table>
+    </div>
+    <script>
+        var tlf=['+34-2-620101099','34 2 666000123','+34-2-62163822','+34-2-655423321','+56-2-765231478','+34-2-6594568741','+34-2-645778221']
+        var expresiónRegular =/^\+34(\-2\-|2)\d{9}$/;// apertura/^\ cierre $/ 
+        for (t of tlf){
+            var fila='<tr>';
+            fila+='<td>'+t+'</td>';
+            fila+='<td>'+expresiónRegular.test(t)+'</td>';   
+            fila+='</tr>';
+            document.getElementById('resultado').innerHTML+=fila;
+        }
+    </script>
+</body>
+</html>

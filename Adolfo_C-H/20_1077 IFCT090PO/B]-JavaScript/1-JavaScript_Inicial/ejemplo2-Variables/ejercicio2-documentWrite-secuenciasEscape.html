@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document.write() + secuencias de escape</title>
+</head>
+
+<body>
+    <script>
+        var texto = 'Cadena de Texto'; var num = 5; buleana = true; igualdad = 0
+        /*el contenido de document se trata cómo html */
+        document.write('<h3>Variable texto/string: ' + texto + '</h3>');//fin de cierre </h3> incorpora un salto de línea en su estilo (margin-top)
+        document.write('<h3>Variable número/number: ' + num + '<br>');
+        document.write('<h3>Variable buleana/boolean: ' + buleana + '<br>');
+        document.write('<h3>Variable texto: ' + texto + '<br>');
+        /*alert y console no aceptan etiquetas html \n \t \' */
+        alert(texto + '\n' + num + '\n' + buleana);
+        console.log('\t' + texto + '\n \t' + num + '\n \t' + buleana);
+    </script>
+</body>
+
+</html>

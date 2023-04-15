@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento a la escucha, selección de elementos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <style>
+        button {
+            text-shadow: 0px 1 px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            display: inline;
+            color: #fff;
+            background-color: #7f8c8d;
+            padding: 7px 20px;
+            border-radius: 100px;
+            margin: 10px 5px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .mensaje {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif, #3f3f3f;
+            color: white;
+            text-shadow:
+                0px 1px 0px #ddd,
+                0px 2px 0px #ccc,
+                0px 3px 0px #bbb,
+                0px 4px 0px #aaa,
+                0px 5px 0px #acacca,
+                0px 6px 1px rgba(0, 0, 0, 0.1),
+                0px 0px 5px rgba(0, 0, 0, 0.1),
+                0px 1px 3px rgba(0, 0, 0, 0.3),
+                0px 3px 5px rgba(0, 0, 0, 0.2),
+                0px 5px 10px rgba(0, 0, 0, 0.25),
+                0px 10px 10px rgba(0, 0, 0, 0.2),
+                0px 20px 20px rgba(0, 0, 0, 0.15);
+            font-weight: bold;
+            font-size: x-large;
+        }
+
+        .rojo {
+            background-color: #e74c3a;
+            box-shadow: 0px 5px 0px #c0392b;
+        }
+
+        .otraClase {
+            font-weight: bold;
+            font-size: x-large;
+            border-radius: 16px;
+            ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" style="text-align: center; margin: 0 auto; max-width: 500px">
+        <h3>Método addEventListener() referenciando varios elementos <code>for of</code></h3>
+        <p>Detector de eventos querySelector()</p>
+        <div>
+            <button class="">Opción 1</button>
+            <button>Opción 2</button>
+            <button>Opción 3</button>
+        </div>
+        <!-- <p class="mensaje rojo"></p> -->
+        <p class="rojo mensaje"></p>
+        <p class="mensaje"></p>
+    </div>
+    <script>
+        var botones = document.querySelectorAll('button');
+        for (x of botones) {
+            x.addEventListener('click', function () {
+                /* document.querySelector('.mensaje, .rojo').innerHTML='Has seleccionado: '+this.innerHTML */
+                document.querySelector('.rojo, .mensaje').innerHTML = 'Has seleccionado: ' + this.innerHTML
+            });
+        }
+    </script>
+</body>
+
+</html>

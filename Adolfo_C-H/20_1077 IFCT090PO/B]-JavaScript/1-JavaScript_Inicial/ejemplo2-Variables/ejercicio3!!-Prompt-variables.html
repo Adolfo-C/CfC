@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método PROMPT + variables</title>
+</head>
+
+<body>
+    <script>
+        /* No parece haber diferencia entre window.promt y promt */
+        var nombre = window.prompt('Introduce tu nombre'); console.log(nombre);
+        var apellido = prompt('Introduce apellidos'); console.log(apellido);
+        var edad = prompt('Edad'); console.log(edad);
+
+        document.write('<h3>Hola!' + nombre + ' ' + apellido + '! Bienvenido aquí</h3>');
+        document.write('<h4>Para tus ' + edad + ' años, parece que tienes 22!</h4>');
+        console.log("HOLAAAAAAAAAAAAAAAA!!!!!1" + '\n' + nombre + ' ' + apellido);
+    </script>
+</body>
+
+</html>
