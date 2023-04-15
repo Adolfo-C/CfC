@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversiones de string a number</title>
+</head>
+
+<body>
+    <!--Dentro de la etiqueta script, es una etiqueta contenedoras quie nos ofrece el doctype (html)
+dentro de dicha etiqueta aplica las condiciones de lenguaje de javascript
+-->
+    <script>
+          var dato = window.prompt('Introduce un nº decimal');//string
+
+        /*
+        Para realizar conversiones de string a number, tendremos dos métodos
+            1. parsefloat(arrgumentos a convertir en numero)
+                Def. Convierte el argumento/los caracteres y nos devolverá como un numero de punto
+                flotante (Si el primer caracter no puede transformalo a numero nos devolverá es No as Number-NaN)
+                y si puede traducirlo, pasará todos los numeros y tratará de retornar un valor numérico incluido
+                aquellos despues del punto)       
+        */
+      var decimal = parseFloat(dato)//number
+
+      /*
+            ii. parseInt(argumentos a convertir a numero)
+                Def. Comprobará el primer argumento o cadena, e intentará devolver un numero entero,
+                de la base especifica (Si no pudiera transformar la cadena a numero, Nan y el caso de poder
+                traducirlos a numero, pasará todos los numeros, anteriores al punto)
+      */
+
+      var entero = parseInt(dato);
+      console.log("var dato: " + dato + ' es un de tipo: ' + typeof(dato) + '\n');
+      console.log("var decimal: " + decimal + ' es un de tipo: ' + typeof(decimal) + '\n');
+      console.log("var entero: " + entero + ' es un de tipo: ' + typeof(entero));
+    </script>
+</body>
+
+</html>
